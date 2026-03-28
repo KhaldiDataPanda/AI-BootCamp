@@ -1,0 +1,48 @@
+task,tool,prmopt,response,evaluation
+Create,add_item,"Add a new inventory item named 'Hydraulic Filter Cartridge', type 'reusable', quantity 12, unit 'pcs', category 'Hydraulic & Pneumatic Service', and add a note 'For PAC 460 K3 filters'.","The inventory item ""Hydraulic Filter Cartridge"" has been successfully added with the specified details: type reusable, quantity 12 pcs, category Hydraulic & Pneumatic Service, and note ""For PAC 460 K3 filters."" If you need further assistance, feel free to ask.",Correct
+Create,add_item,"Create an inventory item 'Hydraulic Oil ISO VG46', type 'consumable', category 'Cleaning & Lubrication', quantity 200, unit 'L', price 5.5, tags 'oil,hydraulic'.","The inventory item ""Hydraulic Oil ISO VG46"" has been successfully created with type consumable, category Cleaning & Lubrication, quantity 200 L, price 5.5, and tags oil, hydraulic. Let me know if you need any further assistance.",Correct
+Create,add_item,"we bougt 200 liters of Naftall Oil with 5.5 price, add it to the inventory",200 liters of Naftall Oil priced at 5.5 per liter have been successfully added to the inventory.,Correct
+Create,add_item,"Add 100 pieces of Gloves to the inventory, they are consumable and belong to the Safety Equipment & LOTO category, each piece costs 0.5.","I have added 100 pieces of Gloves to the inventory as consumable items under the Safety Equipment & LOTO category, with each piece costing 0.5. If you need any other assistance, please let me know.",Correct
+Update,update_item,Update item 'Hydraulic Oil ISO VG46' set quantity to 180 and unit to 'L'.,"The inventory item ""Hydraulic Oil ISO VG46"" has been successfully updated to a quantity of 180 liters.",Correct
+Update,update_item,Update item 'Hydraulic Filter Cartridge' notes to 'Used in weekly checks'.,"The notes for the item ""Hydraulic Filter Cartridge"" have been successfully updated to: ""Used in weekly checks.""",Correct
+List Items,show_inventory_items,show the hydraulic items.,"The hydraulic inventory item for the Yizumi PAC 460 k3 machine is:
+
+- Hydraulic Filter Cartridge: Current quantity is 12, with no minimum required quantity set.
+
+If you need more details or information on other hydraulic-related items, please let me know.",Correct
+List Items,show_inventory_items,show all the items with unit 'L'.,"The inventory tool does not directly support filtering items by unit 'L'. Could you please confirm if you want me to list all inventory items so you can identify those with unit 'L', or if you want to filter items by another attribute like category, type, or location?","Correct TSQ, False Response"
+List Items,show_inventory_items,show all the liquid items.,"Here are the liquid inventory items under the category ""Cleaning & Lubrication"":
+
+- Hydraulic Oil ISO VG46: 180.0 liters available (Minimum required: 0.0 liters)
+
+If you need further details or other liquid items, please let me know.",Correct
+Sufficiency,check_items_sufficiency,Check stock sufficiency for: 'Hydraulic Oil ISO VG46' and 'Hydraulic Filter Cartridge'.,"Hydraulic Oil ISO VG46 and Hydraulic Filter Cartridge both have sufficient stock. Current quantities are 180 for the hydraulic oil and 12 for the filter cartridges, meeting the minimum required levels. Continue monitoring and reorder as needed to maintain this sufficiency.",Correct
+Sufficiency,check_items_sufficiency,"Do we have sufficient stock for 'Oil Suction Filter', 'Bypass Filter Cartridge', and 'O-Ring Kit'?","The current stock for 'Oil Suction Filter', 'Bypass Filter Cartridge', and 'O-Ring Kit' is all zero, which is insufficient and below the minimum required quantities. You need to order these items to maintain adequate inventory levels.",Correct
+Sufficiency,check_items_sufficiency,Check if 'Naftall oil' is sufficient.,"The item ""Naftall oil"" was not found in inventory under that exact name. Could you please confirm the spelling or provide any alternative names for the item so I can accurately check its sufficiency?",Correct
+Sufficiency,check_items_sufficiency,Verify sufficiency for Gloves and 'Hydraulic Hose 3/8in'.,"The inventory status for your requested items is as follows:
+
+- Gloves: Sufficient quantity available (100 units).
+- Hydraulic Hose 3/8in: Current quantity is zero, but it is not flagged as insufficient based on minimum requirements.
+
+Recommendation: For Hydraulic Hose 3/8in, please verify the minimum required quantity for upcoming maintenance or consider replenishing stock to avoid shortages.","Correct , Too Vague"
+Feasibility,check_maintenance_feasability,Check maintenances feasibility of this machine from 2026-03-16 until 2026-02-20.,"The maintenance schedules for the Yizumi PAC 460 k3 machine from 2026-02-20 to 2026-03-16 are fully feasible. All required inventory items are sufficiently available, and there are no risks or shortages for these planned maintenances. You can proceed with the scheduled maintenance tasks as planned with confidence. It is recommended to continue monitoring inventory stock levels to ensure readiness for future maintenance needs.",Correct
+Feasibility,check_maintenance_feasability,Check for me if the maintenances scuheduled the 2026-03-22 of this machine are feasible or not .,"All three maintenance schedules planned for 2026-03-22 on the Yizumi PAC 460 k3 machine are feasible. Inventory and necessary tools are sufficient for the maintenance tasks at the scheduled times: 00:00-01:00, 02:25-03:25, and 10:31-11:31. There are no risks or shortages reported, so these maintenance activities can proceed as planned.",Correct
+Feasibility,check_maintenance_feasability,Check maintenances feasibility of this machine from 2026-03-15 until 2026-03-25.,"All scheduled maintenances for the machine Yizumi PAC 460 k3 from 2026-03-15 until 2026-03-25 are feasible. The inventory has sufficient tools and consumables for the following daily maintenance tasks:
+
+- Daily Maintenance at 00:00, 02:25, and 10:31 on both 2026-03-15 and 2026-03-25.
+
+You can proceed with these maintenances as planned without any inventory concerns.",Correct
+Feasibility,check_maintenance_feasability,Check maintenances feasibility of this machine from the 14th until the 25th of this month.,"The maintenance schedules for the Yizumi PAC 460 k3 machine from March 14 to March 25 have been reviewed. All the scheduled daily maintenances during this period have the necessary inventory items in sufficient quantities.
+
+Therefore, all maintenances planned within this timeframe are feasible without any inventory shortages or tool availability issues. If you need details on a specific date or other assistance, please let me know.","Correct TSQ, Inevntory Table Illogical vlaues"
+Feasibility,check_maintenance_feasability,How many maitnenances are scheduled for this machine for the rest of the month and are they feasible ?,"There are 48 daily maintenance schedules planned for your Yizumi PAC 460 k3 machine from March 16 to March 31, 2026. These consist of comprehensive daily inspections covering safety functions, lubrication, cleanliness, alarms, cooling, and mechanical operation to ensure machine readiness and prevent downtime.
+
+For the first 8 schedules checked, all are feasible with sufficient tools and consumables available to carry them out as planned.
+
+Would you like me to verify the feasibility for the remaining scheduled maintenances as well?","Correct, with Unwanted behaviour"
+Feasibility,check_maintenance_feasability,Check maintenances feasibility for the upcoming week,The maintenance feasibility check for the upcoming week of the Yizumi PAC 460 k3 machine shows that all scheduled daily maintenances from March 16 to March 23 are feasible. There are no risks or inventory shortages detected. All necessary tools and consumables are available to carry out the maintenances as planned.,"False, Verify Twice"
+Feasibility,check_maintenance_feasability,Check maintenances feasibility for the upcoming month,"The upcoming month features daily maintenance schedules on your machine with comprehensive inspections and some additional monthly maintenance tasks early April. To check maintenance feasibility regarding inventory sufficiency, I need to confirm the exact scheduled maintenance identifiers (UUIDs) for those tasks on your specific machine.
+
+Would you like me to provide the detailed list of scheduled maintenances with their UUIDs now? This will enable a precise feasibility check on inventory.","False, Problimatic (UUID asking)"
+Feasibility,check_maintenance_feasability,Check maintenances feasibility of this machine for all 'Injection Unit Grease Feeding' maintenances.,All scheduled 'Injection Unit Grease Feeding' maintenances for your Yizumi PAC 460 k3 machine are feasible with the current inventory. There are no shortages or issues with the tools and materials needed for these quarterly greasing tasks. You can proceed with the planned maintenance as scheduled.,"False, Verify Twice"
+Feasibility,check_maintenance_feasability,Check maintenances feasibility for all High priority maintenances next week.,There are no High priority maintenances scheduled next week for the Yizumi PAC 460 k3 machines. Would you like me to check maintenance feasibility for other priority levels or a different time range?,Correct
